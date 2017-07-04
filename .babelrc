@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "react",
+    "stage-1",
+    ["es2015", { "modules": false }],
+  ],
+  "plugins": [
+    "transform-class-properties",
+  ],
+  "env": {
+    "development": {
+        "plugins": ["flow-react-proptypes", "react-docgen", ["tcomb", {
+        "globals": [
+          {
+            "React$Element": true,
+            "React$Component": true
+          }
+        ]
+        }]]
+    },
+    "test": {
+      "presets": ["es2015", "react", "stage-1"]
+    }
+  }
+}
